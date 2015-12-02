@@ -13,6 +13,7 @@ namespace Nunit2Tests
     public class MyTests
     {
         [Test]
+        [Category("A")]
         public void Test_should_access_config()
         {
             // appSettings
@@ -25,6 +26,7 @@ namespace Nunit2Tests
         }
 
         [Test]
+        [Category("B")]
         public void Test_NET45()
         {
             // Class "ReflectionContext" exists from .NET 4.5 onwards.
@@ -32,6 +34,7 @@ namespace Nunit2Tests
         }
 
         [Test]
+        [Category("B")]
         public void Test_Uri()
         {
             //Thread.Sleep(60000);
