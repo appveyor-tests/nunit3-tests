@@ -8,6 +8,6 @@ before_build:
 
 test:
   categories:
-    except:
+    only:
     - A
     - B
