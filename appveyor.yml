@@ -5,3 +5,9 @@ before_build:
 #- 7z x -o%NUNIT3_HOME% NUnit-3.0.1.zip > NUL
 #- move %NUNIT3_HOME%\bin\nunit3-console.exe %NUNIT3_HOME%\bin\nunit-console.exe
 #- set PATH=%NUNIT3_HOME%\bin;%PATH%
+
+test:
+  categories:
+    only:
+    - A
+    - B
