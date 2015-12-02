@@ -1,2 +1,7 @@
 before_build:
 - nuget restore
+- set NUNIT3_HOME=C:\Tools\NUnit3
+- appveyor DownloadFile https://github.com/nunit/nunit/releases/download/3.0.1/NUnit-3.0.1.zip
+- 7z x -o%NUNIT3_HOME% NUnit-3.0.1.zip > NUL
+- move %NUNIT3_HOME%\bin\nunit3-console.exe %NUNIT3_HOME%\bin\nunit-console.exe
+- set PATH=%NUNIT3_HOME%\bin;%PATH%
