@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -48,6 +49,24 @@ namespace Nunit2Tests
         {
             const string urlWithDots = "http://host.com/path./";
             Assert.AreEqual(urlWithDots, new Uri(urlWithDots).ToString());
+        }
+
+        [Test]
+        public void FailingTestA()
+        {
+            Trace.TraceWarning("Hello, trace!");
+            Console.Error.WriteLine("Hello, error!!");
+            const string urlWithDots = "http://host.com/path./";
+            Assert.AreEqual(urlWithDots, "A");
+        }
+
+        [Test]
+        public void ErroringTestA()
+        {
+            Console.WriteLine("Hello, world!");
+            const string urlWithDots = "http://host.com/path./";
+
+            throw new Exception("This is an error!");
         }
     }
 }
