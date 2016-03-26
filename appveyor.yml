@@ -1,4 +1,4 @@
-#os: test
+os: Visual Studio 2013 - GCE
 
 build:
   verbosity: minimal
