@@ -30,6 +30,7 @@ namespace Nunit2Tests
         [Category("B")]
         public void Test_NET45()
         {
+            Console.WriteLine("This is Test_NET45!");
             // Class "ReflectionContext" exists from .NET 4.5 onwards.
             Assert.IsNotNull(Type.GetType("System.Reflection.ReflectionContext", false), "Class \"ReflectionContext\" exists from .NET 4.5 onwards.");
         }
