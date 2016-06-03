@@ -1,7 +1,9 @@
 #os: Visual Studio 2013 - GCE
 
 only_commits:
-  message: /build/
+#  message: /build/
+  files:
+  - Nunit3Tests
 
 build:
   verbosity: minimal
