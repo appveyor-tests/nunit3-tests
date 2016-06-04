@@ -15,8 +15,8 @@ namespace NunitTestsX86
         public void TestA()
         {
             // appSettings
-            var someValue = "Hello, config!";
-            Assert.AreEqual("Hello, config!", someValue);
+            var someValue = "Hello, config!!";
+            Assert.AreEqual("Hello, config!!", someValue);
         }
     }
 }
