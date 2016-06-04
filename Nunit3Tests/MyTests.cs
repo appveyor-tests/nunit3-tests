@@ -17,7 +17,7 @@ namespace Nunit2Tests
         [Category("A")]
         public void Test_should_access_config()
         {
-            // appSettings
+            // appSettings  
             var someValue = ConfigurationManager.AppSettings["SomeValue"];
             Assert.AreEqual("Hello, config!", someValue);
 
