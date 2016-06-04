@@ -1,9 +1,10 @@
 #os: Visual Studio 2013 - GCE
 
-only_commits:
+skip_commits:
 #  message: /build/
   files:
   - Nunit3Tests/
+  - NunitTestsX86\**\*.cs
 
 build:
   verbosity: minimal
