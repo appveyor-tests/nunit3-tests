@@ -1,7 +1,7 @@
 #os: Visual Studio 2013 - GCE
 
-only_commits:
-  message: /build/
+#only_commits:
+#  message: /build/
 
 build:
   verbosity: minimal
