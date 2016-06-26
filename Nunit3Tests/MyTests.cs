@@ -53,6 +53,7 @@ namespace Nunit2Tests
         }
 
         [Test]
+        [Category("B")]
         public void FailingTestA()
         {
             Trace.TraceWarning("Hello, trace!");
