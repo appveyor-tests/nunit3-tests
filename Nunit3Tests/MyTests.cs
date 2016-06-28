@@ -67,7 +67,7 @@ namespace Nunit2Tests
         public void LongRunningTest_Cat_A()
         {
             Assert.IsTrue(true); 
-            Thread.Sleep(10 * 60 * 1000); 
+            Thread.Sleep(5 * 60 * 1000); 
             Assert.IsTrue(true);
         }          
 
