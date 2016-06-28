@@ -61,6 +61,15 @@ namespace Nunit2Tests
             const string urlWithDots = "http://host.com/path./";
             Assert.AreEqual(urlWithDots, "A");
         }
+        
+        [Test]
+        [Category("A")]
+        public void LongRunningTest_Cat_A()
+        {
+            Assert.IsTrue(true); 
+            Thread.Sleep(10 * 60 * 1000); 
+            Assert.IsTrue(true);
+        }          
 
         [Test]
         public void ErroringTestA()
