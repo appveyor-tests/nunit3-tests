@@ -9,8 +9,8 @@ build:
 before_build:
 - nuget restore
 
-#test:
-#  categories:
-#    only:
-#    - A
-#    - B
+test:
+  categories:
+    except:
+    - A
+    - B
