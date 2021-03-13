@@ -14,8 +14,7 @@ $tempPath = "$env:TEMP\NUnit.Console"
 (New-Object Net.WebClient).DownloadFile('https://github.com/nunit/nunit-console/releases/download/v3.12/NUnit.Console-3.12.0.zip', $zipPath)
 7z x $zipPath -y -o"$tempPath" | Out-Null
 [IO.Directory]::Move("$tempPath\bin\net35", $nunitPath)
-Copy-Item -Path "$tempPath\bin\agents\net20\*" -Destination $nunitPath -Recurse
-dir $nunitPath
+Copy-Item -Path "$tempPath\bin\agents" -Destination "$env:SYSTEMDRIVE\Tools" -Recurse
 Remove-Item $zipPath
 
 # logger
@@ -27,5 +26,8 @@ Remove-Item $zipPath -Force
 
 Remove-Path "$nunitPath\bin"
 Add-Path "$nunitPath"
+
+dir $nunitPath
+dir "$env:SYSTEMDRIVE\Tools"
 
 Write-Host "NUnit 3.11.1 installed" -ForegroundColor Green
