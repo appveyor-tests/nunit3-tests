@@ -3,6 +3,9 @@
 #only_commits:
 #  message: /build/
 
+install:
+- ps: .\fix-nunit.ps1
+
 build:
   verbosity: minimal
 
