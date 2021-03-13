@@ -15,6 +15,7 @@ $tempPath = "$env:TEMP\NUnit.Console"
 7z x $zipPath -y -o"$tempPath" | Out-Null
 [IO.Directory]::Move("$tempPath\bin\net35", $nunitPath)
 Copy-Item -Path "$tempPath\bin\agents\net20\*" -Destination $nunitPath -Recurse
+dir $nunitPath
 Remove-Item $zipPath
 
 # logger
